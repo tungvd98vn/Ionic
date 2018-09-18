@@ -1,0 +1,144 @@
+page-trip {
+    // .tbl_trip{
+    //     // height: 100%;
+    //     width: 100%;
+    // }
+    .col_tripCode {
+        width: 30%;
+    }
+    .col_startPoint {
+        width: 35%;
+    }
+    .col_EndPoint {
+        width: 35%;
+    }
+    .tbl_trip tr {
+        text-align: center;
+        border: 1px solid;
+        height: 3em;
+    }
+    .tbl_trip th {
+        background: #297dfb;
+        color: white;
+    }
+    .lst_tbl:active {
+        color: red;
+        background: #DADADA;
+    }
+    .tbl_trip {
+        // height: 100%;
+        width: 100%;
+    }
+    .head_trip {
+        height: 3em;
+        width: 100%;
+        background: #297dfb;
+        color: white;
+        padding-top: 0.8em;
+        text-align: center;
+        position: fixed;
+        z-index: 100;
+    }
+    .trip_code {
+        float: left;
+        height: 6%;
+        width: 25%;
+        color: rgb(16, 16, 240);
+        font-weight: bold;
+    }
+    .start_point {
+        float: left;
+        height: 6%;
+        width: 37.5%;
+        padding: 0 1%;
+    }
+    .end_point {
+        float: left;
+        height: 6%;
+        width: 37.5%;
+        padding: 0 1%;
+    }
+    .infor_defaul {
+        height: 45%;
+        width: 100%; // border: 1px solid #7D7C7C;
+        text-align: center;
+        background: #FFFFFF;
+        overflow-y: auto;
+    }
+    .infor_more {
+        height: 54%;
+        width: 100%; // margin-left: 2%;
+        // margin-right: 2%;
+        // border-bottom: 3px solid;
+        // background: #E6E6E6;
+        padding: 2%;
+        box-shadow: inset 0px 2px 2px #AAAAAA;
+    }
+    .body {
+        height: 8em;
+        margin-bottom: 4%;
+        border: 1px solid #387ef5
+    }
+    .body:first {
+        margin-top: 15%;
+    }
+    .body:active {
+        color: #3A881F;
+    }
+    .infor_more:hover {
+        background: #A0A0A0;
+    }
+    .infor_defaul:hover {
+        background: #E2E2E2;
+    }
+    .title_more {
+        float: left;
+        width: 27%;
+        font-weight: bold
+    }
+    .data_more {
+        float: left;
+        width: 60%;
+    }
+    .content_page {
+        background: #f3f3f3;
+    }
+    .add_new {
+        position: absolute;
+        z-index: 100;
+        top: 5%;
+        right: 3%;
+        height: 83%;
+        width: 10%;
+        color: white;
+        font-weight: bold;
+        font-size: 110%;
+        border-radius: 53px;
+        padding: 0 !important;
+        font-size: 2em;
+        font-weight: bold;
+        background: none;
+    }
+    .scroll-content {
+        padding: 0 !important;
+    }
+    .margin {
+        margin-top: 3.4em;
+    }
+    #trip_code {
+        padding: 5% 0;
+    }
+    @media(min-width:600px) {
+        #trip_code {
+            padding: 2% 0;
+        }
+        .add_new {
+            width: 6%;
+        }
+    }
+    @media(min-width:1000px) {
+        .add_new {
+            width: 4%;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title style="text-align:center;">
+            Admin System
+        </ion-title>
+        <!-- <ion-icon name="search" id="search" (click)="search()"></ion-icon> -->
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div id="map" class="map"></div>
+    <!-- <button id="add_new_polygon">Thêm bãi xe</button>
+    <button id="save-polygon">Lưu</button>
+    <button id="cancel_polygon">Cancel</button> -->
+</ion-content>
+<ion-footer id="footer_map">
+    <ion-segment [(ngModel)]="clickPaking" color="primary" class="tabParking">
+        <ion-segment-button value="showAllRemooc">
+            Remooc
+        </ion-segment-button>
+        <ion-segment-button value="inforParking">
+            thông tin bãi xe
+        </ion-segment-button>
+    </ion-segment>
+
+    <div class="btn-polygon" [ngSwitch]="clickPaking">
+        <table class="table table7" *ngSwitchCase="'showAllRemooc'">
+            <tbody id="parkingTable"></tbody>
+        </table>
+        <div *ngSwitchCase="'inforParking'">
+            <div id="inforParking">
+                <table class="tbl_infor">
+                    <tr>
+                        <td>Tên bãi xe: </td>
+                        <td>{{nameParking}}</td>
+                    </tr>
+                    <tr>
+                        <td>Ảnh bãi xe: </td>
+                        <td>
+                            <img src="{{imgParking}}" class="img-parking" alt="Cinque Terre">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thông tin bãi xe:</td>
+                        <td>{{infor}}</td>
+                    </tr>
+                    <tr>
+                        <td>Chủ sở hữu:</td>
+                        <td>{{owner}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</ion-footer>
+<ion-header id="footer_search">
+    <div class="content-foot">
+        <input type="text" placeholder="Nhập mã remooc" id="idlistpark2" [(ngModel)]=input_rm (keyup)=filter(item) (focus)="search()">
+        <ion-list *ngIf="showList" class="list_item">
+            <ion-item *ngFor="let item of filteredList" (click)="select(item)" class="list_item_item">
+                {{ item }}
+            </ion-item>
+        </ion-list>
+        <button class="btn-info" id="searchrm">
+            <ion-icon name="search" id="search"></ion-icon>
+        </button>
+    </div>
+</ion-header>

@@ -1,0 +1,58 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="loginBg">
+
+    <ion-row class="login-form">
+        <ion-col>
+            <ion-list inset>
+                <form [formGroup]="myGroup" class="form_register">
+                    <ion-item class="register">
+                        <ion-label class="lbluser">
+                            <ion-icon name="person" class="icontxt"></ion-icon>
+                        </ion-label>
+                        <ion-input formControlName="fDisplayname" [(ngModel)]="txtDisplayname" placeholder="Tên hiển thị" type="text"></ion-input>
+                    </ion-item>
+
+                    <ion-item class="register">
+                        <ion-label class="lbluser">
+                            <ion-icon name="call" class="icontxt"></ion-icon>
+                        </ion-label>
+                        <ion-input formControlName="fPhone" [(ngModel)]="txtPhone" placeholder="Số điện thoại" type="number" ng-change="checkLength()"></ion-input>
+                    </ion-item>
+                    <ion-item class="register">
+                        <ion-label class="lblpas">
+                            <ion-icon name="lock" class="icontxt"></ion-icon>
+                        </ion-label>
+                        <ion-input formControlName="fPassword" [(ngModel)]="txtPassword" placeholder="Mật khẩu" type="password"></ion-input>
+                    </ion-item>
+                    <ion-item class="register">
+                        <ion-label>
+                            <ion-icon name="mail" class="icontxt"></ion-icon>
+                        </ion-label>
+                        <ion-input formControlName="fEmail" [(ngModel)]="txtEmail" placeholder="Email" type="email" id="email"></ion-input>
+                    </ion-item>
+                </form>
+                <ion-item class="txtComCode">
+                    <ion-label style="margin-left: 2%;color: rgb(151, 148, 153);max-width: 9%;">
+                        <img src="assets/img/company.png" class="icon_company" />Mã số công ty
+                    </ion-label>
+                    <!-- <ion-select [(ngModel)]="select_company" placeholder="Mã số công ty">
+                        <ion-option *ngFor="let item of company" value="{{item.company_code}}">{{item.company_code}}</ion-option>
+                    </ion-select> -->
+                    <ion-input [(ngModel)]="select_company" placeholder="Mã số công ty"></ion-input>
+                </ion-item>
+            </ion-list>
+            <button (click)="mRegister()" primary class="register-button">ĐĂNG KÝ</button>
+
+        </ion-col>
+
+    </ion-row>
+</ion-content>

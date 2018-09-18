@@ -1,0 +1,80 @@
+page-select-trip {
+    .scroll-content {
+        padding: 0 !important;
+    }
+    .order_code {
+        height: 6%;
+        width: 50%;
+        float: left;
+        text-align: center;
+        background: #3c81f5;
+        color: white; // padding: 2%;
+        font-weight: bold;
+    }
+    .time {
+        height: 6%;
+        width: 50%;
+        float: right;
+        text-align: center;
+        background: #3c81f5;
+        color: white; // padding: 2%;
+        font-weight: bold;
+    }
+    .ul_lenh {
+        clear: both;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 94%;
+        overflow-y: auto;
+        li {
+            // border-top: 1px solid;
+            height: 9%;
+            font-size: 120%;
+        }
+        li:nth-child(2n) {
+            background: #e4e4e4;
+        }
+    }
+    .order_code1 {
+        height: 100%;
+        width: 40%;
+        float: left;
+        text-align: center;
+        padding: 3% 0%;
+        a {
+            color: black;
+        }
+    }
+    .time1 {
+        height: 100%;
+        width: 38%;
+        float: left;
+        text-align: center;
+        padding: 3% 0%;
+    }
+    .btn_delete {
+        float: left;
+        height: 80%;
+        width: 17%;
+        background: red;
+        margin: 1% 1% 0 0;
+        font-size: 66%;
+    }
+    p.Ngay {
+        margin-right: 63%;
+    }
+    p.Ma {
+        margin-right: 20%;
+    }
+    i.iconReceive {
+        color: #1a63d4;
+        font-size: 170%;
+        margin: 0 0 0 -1%;
+    }
+    i.iconDelete {
+        color: red;
+        font-size: 170%;
+        margin: 0 0 0 3%;
+    }
+}

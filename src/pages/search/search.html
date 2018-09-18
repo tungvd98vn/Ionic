@@ -1,0 +1,78 @@
+<!--
+  Generated template for the Search page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tìm kiếm</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="typeSearch" class="list_radio">
+    <ion-item class="box-radio">
+      <ion-label style="font-size: 120%;font-weight: bold;">Remooc</ion-label>
+      <ion-radio value="1" checked class="radio_btn" (ionSelect)="ChoseTyeSearch(typeSearch)"></ion-radio>
+    </ion-item>
+    <ion-item class="box-radio">
+      <ion-label style="font-size: 120%;font-weight: bold;">Đầu kéo</ion-label>
+      <ion-radio value="2" class="radio_btn" (ionSelect)="ChoseTyeSearch(typeSearch)"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+
+  <div class="form_search_renooc" *ngIf="TypeS">
+    <input class="ipt_remooc" [(ngModel)]="SRemooc" placeholder="Nhập mã remooc">
+    <ion-icon name="search" class="icon-search" (click)="SearchRemooc()"></ion-icon>
+  </div>
+
+
+
+  <div class="form_search_renooc" *ngIf="!TypeS">
+    <input class="ipt_remooc" [(ngModel)]="STractor" placeholder="Nhập mã đầu kéo">
+    <ion-icon name="search" class="icon-search" (click)="searchTractor()"></ion-icon>
+  </div>
+
+  <table *ngIf="TypeS" class="infoS">
+    <tr>
+      <td>Mã remooc</td>
+      <td>{{RMCode}}</td>
+    </tr>
+    <tr>
+      <td>Vị trí</td>
+      <td>{{RMplace}}</td>
+    </tr>
+    <tr>
+      <td>Mã Chuyến đi gần đây</td>
+      <td>{{RMTripCode}}</td>
+    </tr>
+    <tr>
+      <td>Mã đầu kéo gần đây</td>
+      <td>{{RMTractorCode}}</td>
+    </tr>
+  </table>
+
+  <table *ngIf="!TypeS" class="infoS">
+    <tr>
+      <td>Mã đầu kéo</td>
+      <td>{{TrCode}}</td>
+    </tr>
+    <tr>
+      <td>Vị trí</td>
+      <td>{{TrPlace}}</td>
+    </tr>
+    <tr>
+      <td>Mã Chuyến đi gần đây</td>
+      <td>{{TrTripcode}}</td>
+    </tr>
+    <tr>
+      <td>Mã remooc gần đây</td>
+      <td>{{TrRm}}</td>
+    </tr>
+  </table>
+</ion-content>

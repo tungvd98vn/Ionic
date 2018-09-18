@@ -1,0 +1,190 @@
+page-chat {
+    ion-content {
+        background-color: #E4E4E4 !important;
+    }
+    .ion-footer {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
+        background-color: #fff;
+        height: 66px; // bottom: 55px !important;    
+    }
+    th {
+        text-align: center;
+        font-weight: bold;
+    }
+    td {
+        text-align: center;
+        font-weight: normal;
+    }
+    .content_chat {
+        // height: 98%;
+        width: 100%;
+    }
+    .body_chat {
+        height: 83%;
+        width: 100%;
+        padding: 0 2%;
+        overflow-y: auto;
+    }
+    #messages {
+        // height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        margin-bottom: 20%;
+    }
+    #messages div {
+        width: 100%;
+        margin: 2% 0;
+    } //==================== config your message
+    .yourMessage {
+        width: 100%;
+    }
+    .yourName {
+        float: right;
+        height: 100%;
+        width: 70%;
+        text-align: right;
+        font-size: 80%;
+    }
+    .conten-yourMess {
+        float: right;
+        width: 63% !important; // border: 1px solid;
+        border-radius: 5px;
+        background: #FFFFFF;
+        margin: 0 !important;
+        padding: 2%;
+        height: auto !important;
+        margin-bottom: 6% !important;
+        font-weight: 400;
+        border: 1px solid #c9c9c9;
+    } //========================== config my message
+    .myMessage {
+        width: 100%;
+        margin: 2% 0;
+    }
+    .myName {
+        float: left;
+        width: 70%;
+        font-size: 80%;
+    }
+    .content-myMess {
+        float: left;
+        width: 63% !important; // border: 1px solid;
+        border-radius: 5px;
+        background: #4092F9;
+        margin: 0 !important;
+        padding: 2%;
+        height: auto !important;
+        margin-bottom: 6% !important;
+        font-weight: 400;
+        color: white;
+    } //========================== config footer chat
+    #send {
+        height: 100%;
+        width: 100%;
+        float: left;
+        padding: 20% 4%;
+    }
+    .footer_chat {
+        height: 17%;
+        width: 100%;
+        border-top: 1px solid #03cad4;
+    }
+    .icon_send {
+        height: 1.6em;
+        width: 1.6em;
+        background: #00d4de;
+        color: white;
+        border-radius: 50px;
+        padding: 22%;
+        font-size: 2em;
+        text-align: center;
+    }
+    .top_in {
+        height: 60%;
+        width: 100%;
+    }
+    .bot_in {
+        height: 40%;
+        width: 100%;
+        margin-top: 2%;
+    } //============================ config avatar chat
+    .myAvatar {
+        height: 4em;
+        width: 4em;
+        border-radius: 50px;
+        float: left;
+        margin-right: 4%;
+    }
+    .yourAvatar {
+        height: 4em;
+        width: 4em;
+        border-radius: 50px;
+        float: right;
+        margin-left: 4%;
+    }
+    .input-wrap {
+        padding: 0 5px;
+        ion-textarea {
+            position: static;
+        }
+        ion-col.col {
+            padding: 0;
+        }
+        button {
+            width: 100%;
+            height: 55px;
+            font-size: 1.3em;
+            margin: 0;
+        }
+        textarea {
+            border-bottom: 1px #387ef5;
+            border-style: solid;
+        }
+    }
+    .arrow-left {
+        width: 0;
+        height: 0;
+        border-bottom: 9px solid transparent;
+        border-top: 7px solid transparent;
+        border-right: 11px solid #4092f9;
+        position: absolute;
+        left: 19.5%;
+    }
+    .arrow-right {
+        width: 0;
+        height: 0;
+        border-bottom: 9px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 11px solid #ffffff;
+        position: absolute;
+        right: 19.5%;
+    }
+    .icon_chat {
+        max-width: 10.66667% !important;
+    }
+    .input_chat {
+        max-width: 82.66667% !important;
+    } // .scroll-content {
+    //     margin-bottom: 32% !important;
+    // }
+    @media(min-width:600px) {
+        .arrow-left {
+            left: 11%;
+        }
+        .arrow-right {
+            right: 11%;
+        }
+        .conten-yourMess {
+            width: 78% !important;
+        }
+        .content-myMess {
+            width: 78% !important;
+        }
+    }
+    #chat,
+    #prechat {
+        width: 100%;
+        height: 90%;
+        padding: 3%;
+    }
+}

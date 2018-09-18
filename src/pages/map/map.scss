@@ -1,0 +1,158 @@
+page-map {
+    #map{
+
+    }
+    .scroll-content{
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .btn-polygon{
+        height: 13em;
+        background: white;
+        overflow-y: auto;
+    }
+    table.table.table7{
+        width: 100%;
+    }
+    .info{
+        height: 2em;
+        width: 100%;
+        text-align: center;
+        background: #b4d2f1;
+    }
+    .segment-md-primary .segment-button.segment-activated{
+        color: #ffffff;
+        opacity: 1;
+        background: #0d51c3;
+    }
+    .segment-md-primary .segment-button{
+        color: #ffffff;
+    }
+    .tabParking{
+        // background: #3474e1;
+        // background: transparent;
+        background: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .segment-md-primary .segment-button.segment-activated{
+        color: white;
+        opacity: 1;
+        background: #1257ce;
+        font-weight: bold;
+        font-size: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .segment-md-primary .segment-button{
+        color: white;
+        background: #F9971E;
+        font-weight: bold;
+        font-size: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom: 0 !important;
+    }
+    .img-parking{
+        width: 100%;
+        height: 18%;
+    }
+    .tbl_infor{
+        width: 100%;
+        // border: 1px groove #3474e1;
+    }
+    .tbl_infor tr td:first-child{
+        font-weight: bold;
+        width: 37%;
+        // background: #c0d5f9;
+        // border-right: 1px groove #3474e1;
+    }
+    .tbl_infor tr{
+        height: 3em;
+        border-bottom: 1px outset;
+    }
+    .success{
+        border-bottom: 1px outset;
+        height: 3em;
+    }
+    #search{
+        float: right;
+        width: 12%;
+        font-size: 197%;
+        text-align: center;
+        color: white;
+    }
+    #footer_search{
+        height: 3.3em;
+        background: white;
+        top: 3em;
+        
+    }
+    .content-foot {
+        height: 100%;
+        width: 100%;
+        padding: 2% 2%;
+    }
+    #idlistpark2 {
+        height: 100%;
+        width: 85%;
+        padding: 0 1% 0 2%;
+        float: left;
+        border-radius: 5px 0 0 5px;
+    }
+    .btn-info{
+        height: 100%;
+        width: 15%;
+        background: #387ef5;
+        color: white;
+        font-weight: bold;
+        border-radius: 0 5px 5px 0;
+        padding-right: 9%;
+    }
+    .list_code{
+        z-index: 1000;
+        position: absolute;
+        float: left;
+        left: 4%;
+        margin-top: 12%;
+    }
+    .item_code{
+        background-color: rgba(193, 193, 193, 0.69);
+    }
+    .list_item{
+        position: absolute;
+        top: 98%;
+        overflow-y: auto;
+        height: 600%;
+    }
+       @media (min-width:800px) {
+        #footer_search{
+            height: 6.3em;
+        }
+
+    }
+    @media(min-width:600px){
+        #footer_search{
+            height: 4.3em;
+            top: 3.5em;
+        }
+        .content-foot{
+            padding: 1% 2%;
+        } 
+        ion-footer{
+            height: 40%;
+        }
+        .btn-polygon{
+            height: 92%;
+        }
+        .tbl_infor tr{
+            height: 8em;
+        }
+        .success{
+            height: 6em;
+        }
+        .img-parking{
+            width: 86%;
+        }
+    }
+}

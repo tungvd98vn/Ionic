@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="float: left;width: 100%;text-align: center;">
+      Chuyến đi
+    </ion-title>
+    <button class="add_new" (click)="add_new_trip()">
+      <img class="img_add" src="assets/imgs/plus_add_green.png" />
+    </button>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="content_page">
+  <div class="tb">{{Thongbao}}</div>
+  <div class="head_trip">
+    <div class="trip_code" style="color: white !important;">Mã chuyến đi</div>
+    <div class="start_point">Điểm đi</div>
+    <div class="end_point">Điểm đến</div>
+  </div>
+  <div class="margin">
+    <div class="body" *ngFor="let p of listTracking" (click)="detail_trip(p)">
+      <div class="infor_defaul">
+        <div class="trip_code" id="trip_code">{{p.Trip_code}}</div>
+        <div class="start_point">{{p.Start_position}}</div>
+        <div class="end_point">{{p.End_position}}</div>
+      </div>
+      <div class="infor_more">
+        <div class="title_more">Trạng thái:</div>
+        <div *ngIf="p.End_position==null" class="data_more">Đang trong chuyến</div>
+        <div *ngIf="p.End_position!=null" class="data_more">Đã hoàn thành</div>
+        <div class="title_more">Mã đầu kéo:</div>
+        <div class="data_more">{{p.Tractor_code}}</div>
+        <div class="title_more">Mã remooc:</div>
+        <div class="data_more">{{p.Remooc_code}}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar [hidden]="true" *navbar>
+    <ion-title>
+      <i class="fa fa-sign-in" aria-hidden="true"></i>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce class="loginBg">
+  <!--<ion-row class="login-logo">
+        <ion-col><img src="assets/img/logo.png" class="imglogo" /></ion-col>
+    </ion-row>-->
+  <!-- <div class="version">Phiên bản hiện tại</div> -->
+
+  <div class="loginConfig">
+    <ion-row class="login-form">
+      <ion-col>
+        <ion-list inset>
+
+          <ion-item class="txtsignin1">
+            <ion-label>
+              <ion-icon name="person" class="icontxt"></ion-icon>
+            </ion-label>
+            <ion-input [(ngModel)]="txtEmail" placeholder="Tên đăng nhập" type="text"></ion-input>
+          </ion-item>
+          <ion-item class="txtsignin2">
+            <ion-label class="lblpass">
+              <ion-icon name="lock" class="icontxt"></ion-icon>
+            </ion-label>
+            <ion-input [(ngModel)]="txtPassword" placeholder="Mật khẩu" type="password"></ion-input>
+          </ion-item>
+
+
+          <!-- <ion-item class="txtComCode">
+            <!-- <ion-label style="margin-left: 2%;color: rgb(151, 148, 153);max-width: 7%">
+              <img src="assets/img/company.png" class="icon_company" /> Mã số công ty
+            </ion-label>
+            <ion-select [(ngModel)]="select_company" placeholder="Mã số công ty">
+              <ion-option *ngFor="let item of company" value="{{item.company_code}}">{{item.company_code}}</ion-option>
+            </ion-select> -->
+          <!-- <ion-input [(ngModel)]="select_company" placeholder="Nhập mã công ty" (keyup.enter)="mLogin()"></ion-input>
+          </ion-item> -->
+        </ion-list>
+        <button (click)="msingup()" primary class="singup-button">Đăng kí</button>
+        <button (click)="mLogin()" primary class="login-button">Đăng nhập</button>
+      </ion-col>
+    </ion-row>
+
+    <div class="forgotPass" (click)="forgotPass()">Quên mật khẩu?</div>
+    <ion-col>
+      <button (click)="mLoginFB()" primary class="facebook-button">
+        <ion-icon name="logo-facebook" class="iconface"></ion-icon>ĐĂNG NHẬP BẰNG FACEBOOK
+      </button>
+    </ion-col>
+  </div>
+</ion-content>

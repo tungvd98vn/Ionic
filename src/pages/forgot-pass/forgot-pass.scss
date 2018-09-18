@@ -1,0 +1,35 @@
+page-forgot-pass {
+    .btn_forgot {
+        height: 9%;
+        width: 60%;
+        border-radius: 6px;
+        background: #559c29;
+        color: white;
+        font-size: 120%;
+        font-weight: bold;
+        margin: 0 20%;
+    }
+    .ipt_email {
+        height: 8%;
+        width: 100%;
+        border: 1px solid #7d7d7d;
+        border-radius: 8px;
+        margin: 3% 0;
+    }
+    .ttl {
+        font-weight: bold;
+    }
+    .iconMail {
+        height: 100%;
+        width: 12%;
+        padding: 3%;
+        font-size: 121%;
+        float: left;
+    }
+    .ipt_email1 {
+        height: 100%;
+        border: none;
+        float: left;
+        width: 80%;
+    }
+}

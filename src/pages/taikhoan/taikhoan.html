@@ -1,0 +1,118 @@
+<!--
+  Generated template for the Taikhoan page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align:center;">
+      Tài Khoản
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="taikhoan">
+  <div class="bg-top">
+    <div class="bg-left">
+      <img src={{url_avatar}} (click)="uploadAvatar()">
+      <ion-icon name="ios-create-outline"></ion-icon>
+      <!-- <button (click)="uploadAvatar()" class="btnUA">Upload Avatar</button> -->
+    </div>
+    <div class="bg-right">
+      <table class="tb_tk">
+        <tr>
+          <td class="fomat">Họ tên:</td>
+          <td>{{displayname}}</td>
+        </tr>
+        <tr>
+          <td class="fomat">SĐT:</td>
+          <td>{{txtPhone}}</td>
+        </tr>
+      </table>
+      <!-- <button (click)="money()" primary class="money-button">NẠP TIỀN</button> -->
+    </div>
+  </div>
+
+  <!--<ion-row class="login-form">
+        <ion-col>-->
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="person" class="icontxt"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="txtUsername" placeholder="Tên hiển thị" type="text"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-label>
+        <ion-icon name="lock" class="icontxt"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="txtPassword" placeholder="Mật khẩu" type="password" readonly="true" disabled="true"></ion-input>
+    </ion-item> -->
+    <form [formGroup]="updateUser">
+      <!-- <ion-item>
+                <ion-label>
+                    <ion-icon name="person" class="icontxt"></ion-icon>
+                </ion-label>
+                <ion-input formControlName="fDisplayname" [(ngModel)]="txtDisplayName" readonly="true" placeholder="Tên hiển thị" type="text"></ion-input>
+            </ion-item> -->
+
+
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-call" class="icontxt"></ion-icon>
+        </ion-label>
+        <ion-input formControlName="fPhone" [(ngModel)]="txtPhone" readonly="true" placeholder="Số điện thoại" type="tel" readonly="true"
+          disabled="true"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-mail" class="icontxt"></ion-icon>
+        </ion-label>
+        <ion-input formControlName="fEmail" [(ngModel)]="txtEmail" readonly="true" placeholder="Email" type="email" disabled="true"></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <button (click)="update()" primary class="singup-button">Cập nhật</button>
+  <button (click)="update_pass()" primary class="singup-button">Đổi mật khẩu</button>
+
+  <!--</ion-col>
+
+    </ion-row>-->
+  <!--popup đổi mk-->
+  <div id="myModal123" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>Đổi mật khẩu</div>
+      </div>
+      <div class="modal-body">
+        <div class="passOld">
+          <ion-icon name="lock" class="icontxt"></ion-icon>
+          <ion-input class="update_password" type="password" [(ngModel)]="pass_old" placeholder="Mật khẩu cũ"></ion-input>
+        </div>
+        <form [formGroup]="updatePass" class="form_passnew">
+          <div class="passnew1">
+            <ion-icon name="lock" class="icontxt"></ion-icon>
+            <ion-input formControlName="newpass1" class="update_password" type="password" [(ngModel)]="pass_new1" placeholder="Mật khẩu mới"></ion-input>
+          </div>
+          <div class="passnew1">
+            <ion-icon name="lock" class="icontxt"></ion-icon>
+            <ion-input formControlName="newpass2" class="update_password" type="password" [(ngModel)]="pass_new2" placeholder="Nhập lại mật khẩu mới"></ion-input>
+          </div>
+        </form>
+      </div>
+      <button class="confirm" (click)="confirm()">Xác nhận</button>
+      <button class="close" (click)="close()">Hủy</button>
+    </div>
+  </div>
+
+</ion-content>

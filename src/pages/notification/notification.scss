@@ -1,0 +1,21 @@
+page-notification {
+    .ionContent{
+        background: #e5efe8;
+    }
+    .lst_noti ul{
+        padding: 0 !important;
+    }
+    .lst_noti ul li{
+        list-style-type: disc;
+        list-style: none;
+        border: 1px solid;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 1px 1px 1px;
+        padding: 10px;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+        color: black !important;
+    }
+}

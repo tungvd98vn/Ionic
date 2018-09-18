@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ForgotPass page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lấy lại mật khẩu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="ttl">Nhập Email đăng ký:</div>
+  <div class="ipt_email">
+    <ion-icon name="mail" class="iconMail"></ion-icon>
+    <input type="email" [(ngModel)]="email" placeholder="example@email.com" class="ipt_email1">
+  </div>
+  <button class="btn_forgot" (click)="forgotPass()">Lấy lại mật khẩu</button>
+</ion-content>

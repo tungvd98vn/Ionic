@@ -1,0 +1,106 @@
+<!--
+  Generated template for the DetailTrip page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="float:left;margin: 3% 0 3% 22%;">Chi Tiết</ion-title>
+    <!-- <div *ngIf="isCheck == false"> -->
+    <button class="complete" (click)="giaiphong()" *ngIf="Status!=null" ion-button disabled>Thả Remooc</button>
+    <button class="complete" (click)="giaiphong()" *ngIf="Status==null" ion-button>Thả Remooc</button>
+
+    <!-- <img class="delete" src="assets/img/delete.png" *ngIf="Status!=null" disabled />
+    <img class="delete" src="assets/img/delete.png" *ngIf="Status==null" /> -->
+
+    <ion-icon class="delete" name="ios-trash-outline" (click)="delete_tracking()" *ngIf="Status!=null" disabled></ion-icon>
+    <ion-icon class="delete" name="ios-trash-outline" (click)="delete_tracking()" *ngIf="Status==null"></ion-icon>
+
+    <!-- </div> -->
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <img src="{{img}}" class="img" /> -->
+  <div id="map" class="map"></div>
+  <table class="tbd_detail">
+    <tr>
+      <td>Mã chuyến đi:</td>
+      <td>
+        <input class="input_detaill" type="text" [(ngModel)]="Trip_code" *ngIf="Status==null">
+        <input class="input_detaill" type="text" [(ngModel)]="Trip_code" readonly="true" *ngIf="Status!=null">
+      </td>
+    </tr>
+    <tr>
+      <td>Trạng thái:</td>
+      <td *ngIf="Status==null">Đang trong chuyến</td>
+      <td *ngIf="Status!=null">Hoàn thành chyến đi</td>
+    </tr>
+    <tr>
+      <td>Mã remooc:</td>
+      <td>
+        <input class="input_detaill" type="text" [(ngModel)]="Remooc_code" *ngIf="Status==null">
+        <input class="input_detaill" type="text" [(ngModel)]="Remooc_code" readonly *ngIf="Status!=null">
+      </td>
+    </tr>
+    <tr>
+      <td>Mã đầu kéo:</td>
+      <td>
+        <input class="input_detaill" type="text" [(ngModel)]="Tractor_code" *ngIf="Status==null">
+        <input class="input_detaill" type="text" [(ngModel)]="Tractor_code" readonly *ngIf="Status!=null">
+      </td>
+    </tr>
+    <tr>
+      <td>Bãi đi:</td>
+      <td>
+        <input class="input_detaill" type="text" [(ngModel)]="Start_position" *ngIf="Status==null">
+        <input class="input_detaill" type="text" [(ngModel)]="Start_position" readonly="true" *ngIf="Status!=null">
+      </td>
+    </tr>
+    <tr>
+      <td>Thời gian rời bãi:</td>
+      <td>
+        <input class="input_detaill" type="text" [(ngModel)]="Start_time" *ngIf="Status==null">
+        <input class="input_detaill" type="text" [(ngModel)]="Start_time" readonly="true" *ngIf="Status!=null">
+      </td>
+    </tr>
+    <tr>
+      <td>Bãi đến:</td>
+      <td>
+        <input class="input_detaill" type="text" [(ngModel)]="autocomplete.query" *ngIf="Status==null" (input)='updateSearch()' placeholder="Địa điểm đi...">
+        <ion-input class="input_detaill" [(ngModel)]="autocomplete.query" readonly="true" *ngIf="Status!=null"></ion-input>
+        <div id="text_packing1">{{text_packing1}}</div>
+        <ion-list id="chose_address">
+          <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">
+            {{ item }}
+          </ion-item>
+        </ion-list>
+      </td>
+    </tr>
+    <tr>
+      <td>Thời gian đến:</td>
+      <td>
+        <input class="input_detaill" type="text" [(ngModel)]="End_time" readonly="true" *ngIf="Status==null">
+        <input class="input_detaill" type="text" [(ngModel)]="End_time" readonly="true" *ngIf="Status!=null">
+      </td>
+    </tr>
+    <tr>
+      <td>Ghi chú</td>
+    </tr>
+  </table>
+  <input class="note" type="text" [(ngModel)]="Note" *ngIf="Status==null">
+  <input class="note" type="text" [(ngModel)]="Note" readonly="true" *ngIf="Status!=null">
+  <!-- <div class="action" *ngIf="Status!=null">
+    <!-- <button class="update" ion-button (click)="update_tracking()" disabled>Cập nhật</button> -->
+  <!-- <button class="delete" ion-button (click)="delete_tracking()">Xóa</button>
+  </div>  -->
+  <!-- <div *ngIf="isCheck==false">
+    <div class="action" *ngIf="Status==null">
+      <button class="update" ion-button (click)="update_tracking()">Cập nhật</button>
+      <button class="delete" ion-button (click)="delete_tracking()">Xóa</button>
+    </div>
+  </div> -->
+</ion-content>

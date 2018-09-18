@@ -1,0 +1,172 @@
+page-taikhoan {
+    .confirm {
+        height: 13%;
+        width: 48%;
+        border-radius: 5px;
+        background: #039a09;
+        color: white;
+        font-size: 20px;
+    }
+    .close {
+        height: 13%;
+        width: 48%;
+        border-radius: 5px;
+        background: #039a09;
+        float: right;
+        color: white;
+        font-size: 20px;
+    }
+    .update_password {
+        float: right;
+        height: 100%;
+        width: 86%;
+        padding: 3%;
+    }
+    .fomat {
+        width: 28%
+    }
+    .singup-button {
+        height: 3em;
+        width: 49%;
+        border-radius: 5px;
+        background: #3474e1;
+        color: white;
+        font-weight: bold;
+    }
+    .bg-left {
+        height: 100%
+    }
+    .btnUA {
+        height: 23%;
+        width: 52%;
+        margin-left: 21%;
+        background: #c94646;
+        border-radius: 4px;
+        color: white
+    } // popup update_password
+    .modal {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 7% 8% 70%;
+    }
+    /* Modal Content */
+    .modal-content {
+        border-radius: 5px;
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        overflow-y: auto;
+        margin-bottom: 50%;
+    }
+    .modal-body {
+        height: 72%;
+        padding: 5% 2% 0 2%;
+        text-align: center;
+    }
+    .modal-header {
+        height: 15%;
+        padding: 5%;
+        background: #3474e1;
+        color: white;
+        font-size: 120%;
+        font-weight: bold;
+        text-align: center;
+    }
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    .tb_tk {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 4%;
+        width: 100%;
+    }
+    .bg-right {
+        float: left;
+        width: 60%;
+        height: 100%;
+        padding-top: 10%;
+    }
+    .bg-top {
+        background-size: cover !important;
+    }
+    .bg-top img {
+        width: 42%;
+        height: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 100%;
+        margin: 13% 0 0 27%;
+    }
+    .bg-left {
+        float: left;
+        width: 40%;
+        height: 100%;
+    }
+    .scroll-content {
+        margin-bottom: 0 !important;
+    }
+    @media(min-width:500px) {
+        .bg-top {
+            height: 20% !important;
+        }
+        page-taikhoan .tb_tk {
+            font-size: 180%;
+        }
+        .money-button {
+            width: 35.1%;
+            height: 36%;
+        }
+        .modal-content {
+            height: 30%;
+        }
+        .tb_tk {
+            font-size: 180%;
+        }
+    }
+    .passOld {
+        height: 20%;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    .icontxt {
+        float: left;
+        width: 14%;
+        margin: 3% 0px;
+    }
+}

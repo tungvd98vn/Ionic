@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-toggle class="togge_stop" [ngModel]="isToggled_stop" (ionChange)="toggchange_stop()"></ion-toggle>
+
+    <div style="text-align:left;" *ngIf="checkupdate == false">
+
+    </div>
+    <button ion-button (click)="update()" class="icon_add" *ngIf="checkupdate == true">Update App</button>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="action" id="action_popup">
+
+    <!--  on off  -->
+    <div class="on_off">
+      <button ion-button color="danger" class="khoitao" (click)="huy_data()" [disabled]="!start"> Huỷ chuyến </button>
+      <button ion-button class="khoitao" color="green" (click)="get_trip_code()" [disabled]="start"> Khởi tạo </button>
+    </div>
+
+    <!--  on off  -->
+
+
+
+    <div class="order_truck">
+
+      <ion-select [(ngModel)]="trieutap" interface="popover" class="slt_trieutap" *ngIf="lenh">
+        <ion-option *ngFor="let lenh of list_lenh" value="{{lenh.id}}" (ionSelect)="selectLenh(lenh)">{{lenh.matheodoi}}</ion-option>
+      </ion-select>
+      <ion-select [(ngModel)]="trieutap" interface="popover" class="slt_trieutap" *ngIf="!lenh" disabled>
+        <ion-option *ngFor="let lenh of list_lenh" value="{{lenh.id}}" (ionSelect)="selectLenh(lenh)">{{lenh.matheodoi}}</ion-option>
+      </ion-select>
+
+      <ion-toggle [(ngModel)]="lenh" class="togg" (ionChange)="clickCheck($event)"></ion-toggle>
+      <div class="ttl">Điều động/tự do</div>
+
+
+    </div>
+    <div class="code_tractor">
+      <div class="border-ipt1">
+        <ion-input [readonly]="!start" id="tags" class="input_map" type="text" placeholder="Mã đầu kéo" [(ngModel)]="txtAmount" (keyup)=getItems(event)></ion-input>
+        <img src="assets/imgs/icontractors.png" class="icontractors" />
+        <ion-list *ngIf="showList" class="list_code2" id="chose_tractor">
+          <ion-item *ngFor="let item of temitems" class="item_code" (click)="setText(item)">
+            {{item}}
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="border-ipt2">
+        <ion-input [readonly]="!start" class="start_point" placeholder="Điểm xuất phát" [(ngModel)]="autocomplete3.query3" (input)='updateSearch3()'></ion-input>
+        <ion-icon (click)="getStartGPS2()" name="ios-locate-outline" class="icon_pin"></ion-icon>
+        <ion-list id="chose_address3">
+          <ion-item *ngFor="let item of autocompleteItems3" tappable (click)="chooseItem3(item)">
+            {{ item }}
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+    <div class="menu_place">
+      <div class="menu_start">
+        <ion-input [readonly]="!start" type="text" class="start_ini" placeholder="Điểm lấy hàng" [(ngModel)]="autocomplete.query"
+          (input)='updateSearch()'></ion-input>
+        <!-- <ion-icon (click)="getStartGPS()" name="ios-locate-outline" class="icon_pin"></ion-icon> -->
+        <ion-list id="chose_address" [hidden]="autocompleteItems.length == 0">
+          <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">
+            {{ item }}
+          </ion-item>
+        </ion-list>
+      </div>
+      <!-- <div id="text_packing">{{text_packing1}}</div> -->
+      <div class="menu_start1">
+        <ion-input [readonly]="!start" type="text" class="end_ini" placeholder="Điểm trả hàng" [(ngModel)]="autocomplete2.query2"
+          (input)='updateSearch2()'></ion-input>
+        <!-- <ion-icon (click)="getEndGPS()" ios="ios-pin" md="md-pin" class="icon_pin"></ion-icon> -->
+        <ion-list id="chose_address2" [hidden]="autocompleteItems2.length == 0">
+          <ion-item *ngFor="let item of autocompleteItems2" tappable (click)="chooseItem2(item)">
+            {{ item }}
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <!-- <div id="text_packing1">{{text_packing2}}</div> -->
+    <div class="menu_start2">
+      <div class="border_rm">
+        <ion-input [readonly]="!start" type="text" class="name_remooc" placeholder="Mã remooc" [(ngModel)]="txtcode_remooc" (keyup)=getItems2(event)></ion-input>
+        <img src="assets/imgs/iconremooc.png" class="iconremooc" />
+      </div>
+      <!-- <button ion-button class="enter_name_remooc" color="orange" (click)="enter_remooc()">Enter</button> -->
+      <!-- <img src="assets/img/iconremooc.png" class="iconremooc" /> -->
+      <ion-list *ngIf="showlist2" class="list_code" id="chose_tractor2">
+        <ion-item *ngFor="let item of temitems2" class="item_code" (click)="setText2(item)">
+          {{item}}
+        </ion-item>
+      </ion-list>
+      <div class="border-con">
+        <input [readonly]="!start" placeholder="Mã công" type="text" class="ipt_code" [(ngModel)]="txtCong_code">
+        <img src="assets/imgs/Container.png" class="iconremooc" style="padding: 4% 0px;" />
+      </div>
+    </div>
+    <textarea [readonly]="!start" type="text" class="list_name" placeholder="Ghi chú chuyến đi" [(ngModel)]="note_trip"></textarea>
+    <div class="button-bot">
+      <button ion-button [disabled]="!start" class="keo" color="danger" (click)="function_keo()">Bắt đầu</button>
+      <!--    <button ion-button disabled *ngIf="isCheck == false" class="keo" color="danger" (click)="function_keo()">Bắt đầu</button>-->
+
+      <button ion-button [disabled]="!start" class="giai_phong" color="secondary" (click)="function_giaiphong()" *ngIf="isCheck == true">Kết thúc</button>
+      <!--<button ion-button *ngIf="isCheck == false" class="giai_phong" color="secondary" (click)="function_giaiphong()">Kết thúc</button> -->
+    </div>
+    <div class="img_map">
+      <img src="{{img_map}}" />
+    </div>
+
+  </div>
+</ion-content>

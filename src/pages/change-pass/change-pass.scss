@@ -1,0 +1,44 @@
+page-change-pass {
+    .passOld {
+        height: 9%;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 6px;
+    }
+    .form_passnew {
+        width: 100%;
+        height: 30%;
+    }
+    .passnew1 {
+        width: 100%;
+        height: 30%;
+        border: 1px solid;
+        border-radius: 5px;
+        margin: 5% 0;
+    }
+    .icontxt {
+        float: left;
+        width: 14%;
+        height: 100%;
+        text-align: center;
+        padding: 4% 0;
+    }
+    .update_password {
+        height: 100%;
+        width: 86%;
+        float: right;
+    }
+    .confirm {
+        height: 3em;
+        width: 100%;
+        border-radius: 7px;
+        background: #387ef5;
+        color: white;
+        margin: 0 2%;
+        font-size: 114%;
+        font-weight: bold;
+    }
+    .confirm:active {
+        background: #164fb1;
+    }
+}

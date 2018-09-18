@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align:center">
+      Trò chuyện
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div id="chat" [style.margin-bottom]="showEmojiPicker ? '71%' : '30%'"> -->
+  <div id="chat">
+  </div>
+  <div class="ion-footer" no-border id="input_chat">
+    <ion-grid class="input-wrap">
+      <ion-row>
+        <!-- <ion-col col-2 class="icon_chat">
+          <button ion-button clear icon-only item-right (click)="getLibary()">
+            <ion-icon name="images" ios="ios-images" md="md-images"></ion-icon>
+          </button>
+        </ion-col> -->
+        <!-- <ion-col col-2 class="icon_chat">
+        <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
+          <ion-icon name="md-happy"></ion-icon>
+        </button>
+      </ion-col> -->
+        <ion-col col-10 class="input_chat">
+          <ion-textarea id="text" placeholder="Nhập tin nhắn tại đây" [(ngModel)]="messageChat" (focus)="textarea()" (keyup.enter)="send()">
+          </ion-textarea>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button clear icon-only item-right id="send" (click)="send()">
+            <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- <emoji-picker *ngIf="showEmojiPicker" [(ngModel)]="messageChat"></emoji-picker> -->
+  </div>
+</ion-content>

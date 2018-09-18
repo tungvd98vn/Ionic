@@ -1,0 +1,28 @@
+<!--
+  Generated template for the Enterphone page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Đăng Ký</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <h3>Nhập SĐT để tiếp tục: </h3>
+  <ion-input [(ngModel)]="txtPhone" placeholder="Số điện thoại" type="text" class="txtPhone"></ion-input>
+  <ion-item class="txtComCode">
+    <ion-label style="margin-left: 2%;color: rgb(151, 148, 153);max-width: 9%;">
+      <img src="assets/img/company.png" class="icon_company" /> Mã số công ty
+    </ion-label>
+    <ion-select [(ngModel)]="select_company" placeholder="Mã số công ty">
+      <ion-option *ngFor="let item of company" value="{{item.company_code}}">{{item.company_code}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <button class="btn_login" ion-button (click)="register()">Tiếp Tục</button>
+</ion-content>

@@ -1,0 +1,76 @@
+page-search {
+    .form_search_renooc {
+        height: 8%;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    .ipt_remooc {
+        width: 80%;
+        height: 100%;
+        float: left;
+        border: none;
+        border-radius: 5px;
+        padding: 0 4%;
+    }
+    .icon-search {
+        width: 20%;
+        float: right;
+        height: 100%;
+        text-align: center;
+        font-size: 293%;
+        background: #387ef5;
+        color: white;
+    }
+    .list_radio {
+        height: 10%;
+        width: 100%;
+        margin: 0;
+    }
+    .box-radio {
+        height: 100%;
+        width: 50%;
+        float: left;
+        border: none !important;
+        background: none;
+        .item-inner {
+            border-bottom: none !important;
+        }
+        .radio-icon {
+            border-color: #387ef5 !important;
+            width: 20px;
+            height: 20px;
+        }
+        .radio-inner {
+            background-color: #387ef5 !important;
+            width: 12px;
+            height: 12px;
+        }
+    }
+    .ttl {
+        width: 30%;
+        float: left;
+        padding: 4% 0;
+        font-weight: bold;
+    }
+    .value {
+        width: 70%;
+        float: left;
+        padding: 8% 0;
+        border-bottom: 1px dotted;
+    }
+    .infoS {
+        height: 62%;
+        width: 100%;
+        margin-top: 12%;
+        tr {
+            border-bottom: 1px dotted;
+        }
+        td:first-child {
+            font-weight: bold;
+        }
+        td:last-child {
+            padding-left: 10%;
+        }
+    }
+}

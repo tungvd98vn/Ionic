@@ -1,0 +1,292 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+li {
+    list-style-type: none;
+}
+
+.ul-menu {
+    // height: 100%;
+    // margin-top: 60%;
+    padding-left: 0;
+}
+
+.menu_information {
+    position: relative;
+    -webkit-backface-visibility: hidden;
+}
+
+[col-4] {
+    padding-top: 1px;
+}
+
+[col-8] {
+    text-align: left;
+}
+
+#id1 {
+    float: left;
+    margin-bottom: 5px;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 110%;
+}
+
+#id2 {
+    float: left
+}
+
+#account1 {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    border: 1px solid #FFAB0C;
+}
+
+@media(max-width:320px) {
+    .menu_information {
+        height: 32% !important;
+    }
+    #account {
+        height: 100% !important;
+        width: 30% !important; //margin-left: 10px !important;
+    }
+    .avatar {
+        height: 40% !important;
+    }
+}
+
+@media(max-width:414px) {
+    // .ul-menu{
+    //    margin-top:  65%;
+    // }
+}
+
+@media(max-width:384px) {
+    .menu_information {
+        height: 17% !important;
+    }
+}
+
+.active {
+    padding-left: 2%;
+    background: red !important;
+    border-left: 10px solid yellow;
+    color: white;
+}
+
+.col-2 {
+    float: left;
+    width: 55%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.col-3 {
+    float: left;
+    width: 25%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+// @media(min-width: 600px){
+//     .menu-inner{
+//         width: 58% !important;
+//     }
+//     .avatar{
+//         width: 100%;
+//         padding-top: 2%;
+//         height: 65%;
+//     }
+//     #account{
+//         height: 89% !important;
+//         width: 50%  !important ;
+//     }
+//     .menu_information{
+//       font-size: 124%;
+//     }
+//     .ul-menu {
+//         margin-top: 89%;
+//         padding-left: 0;
+//     }
+//     .item-md{
+//         font-size: 200%;
+//     }
+// }
+// bottom menu
+.tabs-md .tabbar {
+    background: #387ef5 !important;
+    height: 11% !important;
+    bottom: -14px !important;
+    margin-left: 2% !important;
+}
+
+.tabs-md .tab-button[aria-selected=true] {
+    color: white;
+    background: #2e64bf;
+}
+
+.tabs-md .tab-button {
+    padding: 0;
+    min-height: 5.6rem;
+    font-weight: normal;
+    color: white;
+    background: #387ef5;
+    height: 82%;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: white !important;
+}
+
+.tabs-md .tab-button-icon {
+    color: white !important;
+}
+
+.fixed-content {
+    margin-bottom: 55px !important;
+}
+
+// .scroll-content{
+//     margin-bottom: 55px !important;
+// }
+.toolbar-background-md {
+    background: white !important;
+}
+
+// .bar-button-default-md{
+//     color: #ffffff !important;
+// }
+.toolbar-title {
+    font-size: 1.8rem !important;
+}
+
+//====================================== config alercontroller
+.alert-head {
+    background: #387ef5;
+    text-align: center !important;
+    color: white;
+    padding: 4% !important;
+    border-radius: 5px 5px 0 0;
+}
+
+.alert-wrapper {
+    border-radius: 6px !important;
+}
+
+.alert-title {
+    color: white;
+    font-size: 18px !important;
+}
+
+.alert-message {
+    // padding: 6% !important;
+    text-align: center;
+    color: black !important;
+}
+
+// .alert-button-group{
+//     height: 3em;
+//     padding: 0 !important;
+//     text-align: center;
+//     // border-top: 1px inset;
+// }
+// .alert-button{
+//     margin: 0 !important;
+//     text-align: center !important;
+//     max-width: 22em;
+//     width: 50%;
+//     padding-right: 15% !important;
+//     box-shadow: inset 3px 3px 4px #036f03;
+//     background-color: green !important;
+//     color: #ffffff !important;
+// }
+// .alert-button:last-child{
+//     border-left: 1px solid white;
+//     // padding-right: 22% !important;
+// }
+.alert-tappable {
+    border-bottom: 1px ridge;
+}
+
+.alert-tappable:last-child {
+    border-bottom: none;
+}
+
+.menu-inner {
+    width: 274px !important;
+}
+
+.version {
+    font-size: 90%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    margin-top: 10%;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.item-md ion-icon[item-left] {
+    color: #2e64bf;
+}
+
+.oneBtn {
+    width: 100% !important;
+    text-align: center !important;
+    padding-right: 47% !important;
+    border: none !important;
+}
+
+@media(min-width:600px) {
+    .tabs-md .tabbar {
+        margin-left: 0 !important;
+    }
+    .menu-inner {
+        width: 58% !important;
+    }
+    .avatar {
+        width: 100%;
+        padding-top: 2%;
+        height: 65%;
+    }
+    #account {
+        height: 89% !important;
+        width: 50% !important;
+        margin: 0px !important;
+    }
+    .menu_information {
+        font-size: 124%;
+    } // .ul-menu {
+    //     margin-top: 89%;
+    //     padding-left: 0;
+    // }
+    .item-md {
+        font-size: 200%;
+    }
+}
+
+// @media(min-width:800px){
+//     .ul-menu {
+//         margin-top: 77%;
+//         padding-left: 0;
+//     }
+// }
+li {
+    list-style-type: none !important;
+}

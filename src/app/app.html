@@ -1,0 +1,72 @@
+<ion-menu [content]="content">
+
+  <ion-content>
+    <!-- <div class="menu_information">
+
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4>
+                <ion-avatar >
+                  <img id="account1" class="account1" src="tin.jpg">
+                </ion-avatar>
+              </ion-col>
+              <ion-col col-8>
+                <div class="info">
+                    Hanh<br />
+                    Id: 4045
+                </div>
+                <div class="version">Version 1.0</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div> -->
+    <div class="menu_information">
+      <!-- Backup -->
+      <!-- <ion-avatar class="avatar" item-left>
+        <img id="account" src="{{url_avatar}}">
+      </ion-avatar>
+      <h3>{{username}}</h3>
+      <div class="col-3">ID</div>
+      <div class="col-2">: {{id}}</div>
+      <div class="version">Version {{version}}</div> -->
+
+      <!-- Lần 2 -->
+      <!-- <ion-grid id="grid1"> -->
+      <ion-row>
+        <ion-col col-4 id="col4">
+          <ion-avatar class="avatar">
+            <img id="account" src="{{url_avatar}}">
+            <!-- ../img/menu-left.png -->
+          </ion-avatar>
+        </ion-col>
+        <ion-col col-8>
+          <ion-row>
+            <ion-col id="id1">{{username}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col id="id1">SDT:{{phone}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <div class="version"> Phiên bản:{{version}}</div>
+          </ion-row>
+
+        </ion-col>
+      </ion-row>
+      <!-- </ion-grid> -->
+    </div>
+    <ul class="ul-menu">
+      <li *ngFor="let p of appPages" (click)="openPage(p)">
+        <button ion-item menuClose [class.active]="checkActivePage(p)">
+          <ion-icon item-left [name]="p.icon"></ion-icon>
+          {{p.title}}
+        </button>
+      </li>
+      <button ion-item menuClose (click)="openPageLogout()">
+        <ion-icon item-left name="ios-log-out"></ion-icon>
+        Đăng xuất
+      </button>
+    </ul>
+  </ion-content>
+
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>
